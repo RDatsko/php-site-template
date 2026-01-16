@@ -6,10 +6,10 @@ This is a template that I use when developing my websites.  It's designed to to 
 
 The website directories are broken down into  single files where the "/" is replaced by two underscores "__".  This allows for all the files to be located in a single folder but be mapped to the appropriate URL.  Canonical URL implementation is also implemented.
 
-This means that a URL such as:
-http://127.0.0.1/dir/subdir/
-will load the file in
-/pages/dir__subdir.php
+This means that a URL such as: 
+http://127.0.0.1/dir/subdir/ 
+will load the file in 
+/pages/dir__subdir.php 
 
 As nearly all websites use a template for consistency, this template breaks out the template in a layout folder.  All the files that are used for the template are stored here.  This allows for the template to be changed quickly by replacing the folder.  This also allows for the contents of the pages to remain the same without needing to modify the pages themselves.
 
@@ -23,11 +23,11 @@ Also, I have worked on websites that required multiple languages.  This template
 
 For example, a Japanese site that wishes to also include English can have the same single HTML file which means that the site can be exactly identical without the need of separate files.  In this code, included is an example of using both English Japanese.  It will add the lanuage to be used directly after the domain and use the prefix on which is chosen.  This can also be disabled for sites that are only a single language.
 
-**Single Language Site**
-http://127.0.0.1/dir/subdir/
-**Multiple Language Site**
-http://127.0.0.1/en/dir/subdir/
-http://127.0.0.1/jp/dir/subdir/
+**Single Language Site** 
+http://127.0.0.1/dir/subdir/ 
+**Multiple Language Site** 
+http://127.0.0.1/en/dir/subdir/ 
+http://127.0.0.1/jp/dir/subdir/ 
 
 ### Admin Folder
 
