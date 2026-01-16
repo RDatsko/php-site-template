@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+SetEnv HTTP_MOD_REWRITE On
+Options +FollowSymLinks
+RewriteEngine On
+
+# BLOCK admin/data from web access
+RewriteRule ^admin/data(/|$) - [F,L]
+
+# Redirects
+# ==================================================
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Skip these folders
+RewriteRule ^(admin|assets|layout)(/|$) - [L]
+
+FallbackResource /index.php
+
+# ==================================================
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+</IfModule>
